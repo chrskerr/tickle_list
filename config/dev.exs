@@ -2,7 +2,7 @@ import Config
 
 # Configure your database
 config :tickle_list, TickleList.Repo,
-  username: "postgres",
+  username: "chris",
   password: "postgres",
   hostname: "localhost",
   database: "tickle_list_dev",
@@ -26,7 +26,8 @@ config :tickle_list, TickleListWeb.Endpoint,
   secret_key_base: "FyO1tJNDFEtOJCBL3zUuTYZ/BvizidjhrFpnGlgOnEUHV0Zn7JucgO9CLt2E1bzU",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support

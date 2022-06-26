@@ -18,6 +18,8 @@ defmodule TickleListWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/:workspaceId", PageController, :workspace
+    get "/:workspaceId/:listId", PageController, :list
   end
 
   # Other scopes may use custom stacks.
